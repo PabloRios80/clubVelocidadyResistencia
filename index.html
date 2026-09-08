@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva de Salón - Club Social</title>
+  <!-- Tailwind CSS para diseño moderno y rápido -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Personalización de colores del club
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clubPrimary: '#1e3a8a',   // Azul institucional (puedes cambiarlo)
+            clubSecondary: '#0284c7', // Azul secundario
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- HEADER CON LOGO -->
+  <header class="bg-clubPrimary text-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
+      <div class="flex items-center gap-4 mb-4 md:mb-0">
+        <!-- Reemplaza la URL por la imagen del logo del club -->
+        <img src="https://via.placeholder.com/80" alt="Logo Club" class="w-16 h-16 rounded-full bg-white p-1">
+        <div>
+          <h1 class="text-2xl font-bold">Club Social</h1>
+          <p class="text-blue-200 text-sm">Reserva de Salón de Eventos</p>
+        </div>
+      </div>
+      <nav class="flex gap-4 text-sm font-medium">
+        <a href="#informacion" class="hover:underline">Información</a>
+        <a href="#disponibilidad" class="hover:underline">Calendario</a>
+        <a href="#reservar" class="bg-white text-clubPrimary px-4 py-2 rounded-lg font-bold shadow hover:bg-gray-100">Reservar Ahora</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SECCIÓN INFORMACIÓN DEL SALÓN -->
+  <section id="informacion" class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-3xl font-bold text-center text-clubPrimary mb-8">Información del Salón</h2>
+    
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+        <h3 class="text-xl font-bold mb-2 text-clubPrimary">Capacidad y Equipamiento</h3>
+        <p class="text-gray-600 text-sm">Capacidad para 120 personas, vajilla completa, aire acondicionado frío/calor y equipo de sonido básico.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+        <h3 class="text-xl font-bold mb-2 text-clubPrimary">Tarifas Socios</h3>
+        <p class="text-gray-600 text-sm">Descuento exclusivo para socios con cuota al día. Consultar valor y requisitos al momento de reservar.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+        <h3 class="text-xl font-bold mb-2 text-clubPrimary">Horarios de Uso</h3>
+        <p class="text-gray-600 text-sm">Turnos diurnos y nocturnos disponibles. Tolerancia de limpieza previa y posterior incluida.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CALENDARIO Y FORMULARIO -->
+  <section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8">
+    
+    <!-- CALENDARIO DE DISPONIBILIDAD -->
+    <div id="disponibilidad" class="bg-white p-4 rounded-xl shadow border border-gray-100">
+      <h3 class="text-xl font-bold text-clubPrimary mb-4">1. Consulta Disponibilidad</h3>
+      <p class="text-xs text-gray-500 mb-4">Revisa las fechas y horarios ocupados antes de solicitar tu turno.</p>
+      
+      <!-- Pega aquí el enlace de tu Google Calendar -->
+      <div class="aspect-square w-full">
+        <iframe src="https://calendar.google.com/calendar/embed?src=25c3277d1bd6f62260d00de9ffcc9b92501746b5dfaf2f5cfd377044375f3b1f%40group.calendar.google.com&ctz=America%2FArgentina%2FBuenos_Aires" 
+                style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+
+    <!-- FORMULARIO DE RESERVA -->
+    <div id="reservar" class="bg-white p-4 rounded-xl shadow border border-gray-100">
+      <h3 class="text-xl font-bold text-clubPrimary mb-4">2. Solicita tu Reserva</h3>
+      <p class="text-xs text-gray-500 mb-4">Completa los datos y la comisión revisará tu solicitud.</p>
+
+      <!-- Reemplaza el SRC por el iframe de tu Google Form -->
+      <div class="w-full h-[600px]">
+        <iframe src="https://docs.google.com/forms/d/e/TU_FORMULARIO_ID/viewform?embedded=true" 
+                width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-gray-300 py-6 text-center text-sm">
+    <p>© Club Social - Gestión de Reservas</p>
+  </footer>
+
+</body>
+</html>
