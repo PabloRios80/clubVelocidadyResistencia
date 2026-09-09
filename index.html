@@ -49,12 +49,12 @@
       <nav class="hidden md:flex space-x-6 font-semibold text-gray-700">
         <a href="#inicio" class="hover:text-blue-700 transition">Inicio</a>
         <a href="#salon" class="hover:text-blue-700 transition">El Salón</a>
-        <a href="#servicios" class="hover:text-blue-700 transition">Servicios</a>
-        <a href="#contacto" class="hover:text-blue-700 transition">Contacto</a>
+        <a href="#disponibilidad" class="hover:text-blue-700 transition">Disponibilidad</a>
+        <a href="#solicitud" class="hover:text-blue-700 transition">Reservar</a>
       </nav>
 
       <!-- BOTÓN RESERVA -->
-      <a href="#contacto" class="bg-red-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-red-700 transition">
+      <a href="#solicitud" class="bg-red-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-red-700 transition">
         Reservar Salón
       </a>
     </div>
@@ -65,7 +65,7 @@
     <div class="max-w-4xl mx-auto px-4 relative z-10">
       <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Salón de Eventos VyR</h1>
       <p class="text-lg md:text-xl text-blue-200 mb-8">El espacio ideal para tus celebraciones, eventos sociales y corporativos.</p>
-      <a href="#contacto" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition">
+      <a href="#disponibilidad" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition">
         Consultar Disponibilidad
       </a>
     </div>
@@ -76,7 +76,7 @@
     <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">Nuestras Instalaciones</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-600">
-        <h3 class="text-xl font-bold mb-2 text-blue-900">Amplio Capacidad</h3>
+        <h3 class="text-xl font-bold mb-2 text-blue-900">Amplia Capacidad</h3>
         <p class="text-gray-600">Comodidad y espacio garantizado para todos tus invitados con diferentes configuraciones de mesas.</p>
       </div>
       <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-600">
@@ -87,6 +87,37 @@
         <h3 class="text-xl font-bold mb-2 text-blue-900">Ubicación Privilegiada</h3>
         <p class="text-gray-600">Fácil acceso y estacionamiento en el predio de la institución.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN GESTIÓN DE RESERVAS Y DISPONIBILIDAD -->
+  <section class="max-w-7xl mx-auto py-12 px-4 border-t border-gray-200">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-blue-900 mb-2">Alquiler del Salón</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Consulta el calendario de fechas y completa la solicitud. 
+        <strong>Nota:</strong> Todas las solicitudes quedan sujetas a revisión y aprobación final de la Comisión Directiva para concretar el cobro.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- CONTENEDOR 1: CALENDARIO DE GOOGLE -->
+      <div id="disponibilidad" class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-800">
+        <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center">📅 Calendario de Disponibilidad</h3>
+        <div class="w-full h-[600px] overflow-hidden rounded-lg border border-gray-200">
+          <iframe src="https://calendar.google.com/calendar/embed?src=25c3277d1bd6f62260d00de9ffcc9b92501746b5dfaf2f5cfd377044375f3b1f%40group.calendar.google.com&ctz=America%2FAgentina%2FBuenos_Aires" style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+
+      <!-- CONTENEDOR 2: FORMULARIO DE GOOGLE -->
+      <div id="solicitud" class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-600">
+        <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center">📝 Formulario de Reserva</h3>
+        <div class="w-full h-[600px] overflow-hidden rounded-lg border border-gray-200">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfAXvTPQG3hQ-7B1_il27BRU8cYtUilOcLtpzgx87_o3QrGUg/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Cargando formulario...</iframe>
+        </div>
+      </div>
+
     </div>
   </section>
 
