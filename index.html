@@ -1,149 +1,286 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Club Velocidad y Resistencia - Colastiné</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-
-  <!-- ENCABEZADO Y NAVEGACIÓN ORGANIZADO -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
-      
-      <!-- LOGO Y NOMBRE -->
-      <div class="flex items-center space-x-3">
-        <svg class="w-12 h-12 md:w-14 md:h-14 flex-shrink-0" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
-              <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.35"/>
-            </filter>
-            <clipPath id="shield-clip">
-              <path d="M 200,32 C 250,32 320,48 328,72 C 336,170 320,276 200,356 C 80,276 64,170 72,72 C 80,48 150,32 200,32 Z" />
-            </clipPath>
-          </defs>
-          <path d="M 200,12 C 260,12 340,30 350,60 C 360,180 340,300 200,388 C 60,300 40,180 50,60 C 60,30 140,12 200,12 Z" fill="#1e5899" />
-          <path d="M 200,32 C 250,32 320,48 328,72 C 336,170 320,276 200,356 C 80,276 64,170 72,72 C 80,48 150,32 200,32 Z" fill="#ffffff" />
-          <g clip-path="url(#shield-clip)">
-            <rect x="-50" y="80" width="500" height="45" fill="#2d6cb4" transform="rotate(-30 200 200)" />
-            <rect x="-50" y="180" width="500" height="45" fill="#2d6cb4" transform="rotate(-30 200 200)" />
-          </g>
-          <path d="M 105,75 L 195,165 L 155,165 L 245,255 L 205,255 L 315,310 L 235,195 L 275,195 L 185,105 L 225,105 Z" fill="#d32f2f" filter="url(#shadow)" />
-        </svg>
-
-        <div class="flex flex-col">
-          <span class="font-black text-xl md:text-2xl text-blue-900 tracking-wide uppercase leading-tight">Velocidad y Resistencia</span>
-          <span class="text-xs md:text-sm font-bold text-red-600 tracking-wider">Colastiné, Santa Fe</span>
-        </div>
-      </div>
-
-      <!-- MENÚ + INSTAGRAM + BOTÓN RESERVA -->
-      <div class="flex items-center space-x-4">
-        <nav class="hidden lg:flex space-x-6 font-semibold text-gray-700 text-sm">
-          <a href="#inicio" class="hover:text-blue-700 transition">Inicio</a>
-          <a href="#salon" class="hover:text-blue-700 transition">El Salón</a>
-          <a href="#disponibilidad" class="hover:text-blue-700 transition">Disponibilidad</a>
-          <a href="#solicitud" class="hover:text-blue-700 transition">Reservar</a>
-        </nav>
-
-        <!-- ENLACE INSTAGRAM -->
-        <a href="https://www.instagram.com/clubvelocidadyresistencia/" target="_blank" rel="noopener noreferrer" class="text-pink-600 hover:text-pink-700 transition p-1" title="Instagram del Club">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Club Velocidad y Resistencia - Colastiné</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800 font-sans">
+    <!-- ENCABEZADO Y NAVEGACIÓN ORGANIZADO -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4"
+      >
+        <!-- LOGO Y NOMBRE -->
+        <div class="flex items-center space-x-3">
+          <svg
+            class="w-12 h-12 md:w-14 md:h-14 flex-shrink-0"
+            viewBox="0 0 400 400"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+                <feDropShadow
+                  dx="2"
+                  dy="4"
+                  stdDeviation="4"
+                  flood-opacity="0.35"
+                />
+              </filter>
+              <clipPath id="shield-clip">
+                <path
+                  d="M 200,32 C 250,32 320,48 328,72 C 336,170 320,276 200,356 C 80,276 64,170 72,72 C 80,48 150,32 200,32 Z"
+                />
+              </clipPath>
+            </defs>
+            <path
+              d="M 200,12 C 260,12 340,30 350,60 C 360,180 340,300 200,388 C 60,300 40,180 50,60 C 60,30 140,12 200,12 Z"
+              fill="#1e5899"
+            />
+            <path
+              d="M 200,32 C 250,32 320,48 328,72 C 336,170 320,276 200,356 C 80,276 64,170 72,72 C 80,48 150,32 200,32 Z"
+              fill="#ffffff"
+            />
+            <g clip-path="url(#shield-clip)">
+              <rect
+                x="-50"
+                y="80"
+                width="500"
+                height="45"
+                fill="#2d6cb4"
+                transform="rotate(-30 200 200)"
+              />
+              <rect
+                x="-50"
+                y="180"
+                width="500"
+                height="45"
+                fill="#2d6cb4"
+                transform="rotate(-30 200 200)"
+              />
+            </g>
+            <path
+              d="M 105,75 L 195,165 L 155,165 L 245,255 L 205,255 L 315,310 L 235,195 L 275,195 L 185,105 L 225,105 Z"
+              fill="#d32f2f"
+              filter="url(#shadow)"
+            />
           </svg>
+
+          <div class="flex flex-col">
+            <span
+              class="font-black text-xl md:text-2xl text-blue-900 tracking-wide uppercase leading-tight"
+              >Velocidad y Resistencia</span
+            >
+            <span
+              class="text-xs md:text-sm font-bold text-red-600 tracking-wider"
+              >Colastiné, Santa Fe</span
+            >
+          </div>
+        </div>
+
+        <!-- MENÚ + INSTAGRAM + BOTÓN RESERVA -->
+        <div class="flex items-center space-x-4">
+          <nav
+            class="hidden lg:flex space-x-6 font-semibold text-gray-700 text-sm"
+          >
+            <a href="#inicio" class="hover:text-blue-700 transition">Inicio</a>
+            <a href="#salon" class="hover:text-blue-700 transition">El Salón</a>
+            <a href="#disponibilidad" class="hover:text-blue-700 transition"
+              >Disponibilidad</a
+            >
+            <a href="#solicitud" class="hover:text-blue-700 transition"
+              >Reservar</a
+            >
+          </nav>
+
+          <!-- ENLACE INSTAGRAM -->
+          <a
+            href="https://www.instagram.com/clubvelocidadyresistencia/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-pink-600 hover:text-pink-700 transition p-1"
+            title="Instagram del Club"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="#solicitud"
+            class="bg-red-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-red-700 transition text-sm"
+          >
+            Reservar
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- BANNER PRINCIPAL (ORDENADO Y LIMPIO) -->
+    <section
+      id="inicio"
+      class="bg-blue-900 text-white py-16 text-center relative"
+    >
+      <div class="max-w-3xl mx-auto px-4">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
+          Salón de Eventos VyR
+        </h1>
+        <p class="text-lg md:text-xl text-blue-200 font-medium mb-8">
+          Vení a compartir tu alegría al club del barrio. En Colastiné, Santa
+          Fe.
+        </p>
+        <a
+          href="#disponibilidad"
+          class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-base shadow-lg transition inline-block"
+        >
+          Consultar Disponibilidad
         </a>
+      </div>
+    </section>
 
-        <a href="#solicitud" class="bg-red-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-red-700 transition text-sm">
-          Reservar
+    <!-- INSTALACIONES -->
+    <section id="salon" class="max-w-7xl mx-auto py-12 px-4">
+      <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">
+        Nuestras Instalaciones
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-blue-600"
+        >
+          <img
+            src="salonVyR1.png"
+            alt="Instalaciones Salón VyR 1"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-blue-900">
+              Amplio Salón y Asador
+            </h3>
+            <p class="text-gray-600">
+              Espacio techado ideal para banquetes, bailes y festejos familiares
+              con tradicional parrilla/asador integrado.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-red-600"
+        >
+          <img
+            src="salonVyR2.png"
+            alt="Instalaciones Salón VyR 2"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-blue-900">
+              Ambiente Cálido y Tradicional
+            </h3>
+            <p class="text-gray-600">
+              Techo de madera decorado y gran ventilación natural para disfrutar
+              momentos únicos con tus allegados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISPONIBILIDAD Y FORMULARIO -->
+    <section class="max-w-7xl mx-auto py-12 px-4 border-t border-gray-200">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-blue-900 mb-2">
+          Alquiler del Salón
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Consulta el calendario de fechas y completa la solicitud.
+          <strong>Nota:</strong> Todas las solicitudes quedan sujetas a revisión
+          y aprobación final de la Comisión Directiva para concretar el cobro.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div
+          id="disponibilidad"
+          class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-800"
+        >
+          <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center">
+            📅 Calendario de Disponibilidad
+          </h3>
+          <div
+            class="w-full h-[600px] overflow-hidden rounded-lg border border-gray-200"
+          >
+            <iframe src="https://calendar.google.com/calendar/embed?src=25c3277d1bd6f62260d00de9ffcc9b92501746b5dfaf2f5cfd377044375f3b1f%40group.calendar.google.com&ctz=America%2FArgentina%2FBuenos_Aires" style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+              style="border: 0"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
+          </div>
+        </div>
+
+        <div
+          id="solicitud"
+          class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-600"
+        >
+          <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center">
+            📝 Formulario de Reserva
+          </h3>
+          <div
+            class="w-full h-[600px] overflow-hidden rounded-lg border border-gray-200"
+          >
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfAXvTPQG3hQ-7B1_il27BRU8cYtUilOcLtpzgx87_o3QrGUg/viewform?embedded=true"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              >Cargando formulario...</iframe
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN UBICACIÓN EN EL PIE DE PÁGINA (MÁS PEQUEÑO Y SUTIL) -->
+    <section class="bg-gray-200 py-8 px-4 border-t border-gray-300 text-center">
+      <div class="max-w-md mx-auto">
+        <p class="text-sm font-semibold text-gray-700 mb-3">
+          ¿Necesitas saber cómo llegar al predio?
+        </p>
+        <!-- REEMPLAZA "TU_ENLACE_DE_MAPS_AQUI" POR EL LINK COPIADO EN EL PASO 2 -->
+        <a
+          href="https://maps.app.goo.gl/VFpeh7saMAnFQ8AQ6"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 bg-gray-100 hover:bg-white text-gray-700 border border-gray-400 font-medium text-xs px-3 py-1.5 rounded-md shadow-sm transition"
+        >
+          📍 Dónde estamos y cómo llegar
         </a>
       </div>
-    </div>
-  </header>
+    </section>
 
-  <!-- BANNER PRINCIPAL (ORDENADO Y LIMPIO) -->
-  <section id="inicio" class="bg-blue-900 text-white py-16 text-center relative">
-    <div class="max-w-3xl mx-auto px-4">
-      <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">Salón de Eventos VyR</h1>
-      <p class="text-lg md:text-xl text-blue-200 font-medium mb-8">
-        Vení a compartir tu alegría al club del barrio. En Colastiné, Santa Fe.
-      </p>
-      <a href="#disponibilidad" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-base shadow-lg transition inline-block">
-        Consultar Disponibilidad
-      </a>
-    </div>
-  </section>
-
-  <!-- INSTALACIONES -->
-  <section id="salon" class="max-w-7xl mx-auto py-12 px-4">
-    <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">Nuestras Instalaciones</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-      <div class="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-blue-600">
-        <img src="salonVyR1.png" alt="Instalaciones Salón VyR 1" class="w-full h-64 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2 text-blue-900">Amplio Salón y Asador</h3>
-          <p class="text-gray-600">Espacio techado ideal para banquetes, bailes y festejos familiares con tradicional parrilla/asador integrado.</p>
-        </div>
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-gray-900 text-white py-6 border-t-4 border-red-600">
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center gap-3 text-center"
+      >
+        <p class="font-semibold text-sm">
+          Club Velocidad y Resistencia &copy; 2026 - Colastiné, Santa Fe
+        </p>
+        <a
+          href="https://www.instagram.com/clubvelocidadyresistencia/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-xs text-pink-400 hover:text-pink-300 transition"
+        >
+          <span>Síguenos en Instagram @clubvelocidadyresistencia</span>
+        </a>
       </div>
-
-      <div class="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-red-600">
-        <img src="salonVyR2.png" alt="Instalaciones Salón VyR 2" class="w-full h-64 object-cover">
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2 text-blue-900">Ambiente Cálido y Tradicional</h3>
-          <p class="text-gray-600">Techo de madera decorado y gran ventilación natural para disfrutar momentos únicos con tus allegados.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DISPONIBILIDAD Y FORMULARIO -->
-  <section class="max-w-7xl mx-auto py-12 px-4 border-t border-gray-200">
-    <div class="text-center mb-8">
-      <h2 class="text-3xl font-bold text-blue-900 mb-2">Alquiler del Salón</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        Consulta el calendario de fechas y completa la solicitud. 
-        <strong>Nota:</strong> Todas las solicitudes quedan sujetas a revisión y aprobación final de la Comisión Directiva para concretar el cobro.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <div id="disponibilidad" class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-800">
-        <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center">📅 Calendario de Disponibilidad</h3>
-        <div class="w-full h-[600px] overflow-hidden rounded-lg border border-gray-200">
-          <iframe src="https://calendar.google.com/calendar/embed?src=25c3277d1bd6f62260d00de9ffcc9b92501746b5dfaf2f5cfd377044375f3b1f%40group.calendar.google.com&ctz=America%2FAgentina%2FBuenos_Aires" style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
-        </div>
-      </div>
-
-      <div id="solicitud" class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-600">
-        <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center">📝 Formulario de Reserva</h3>
-        <div class="w-full h-[600px] overflow-hidden rounded-lg border border-gray-200">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfAXvTPQG3hQ-7B1_il27BRU8cYtUilOcLtpzgx87_o3QrGUg/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Cargando formulario...</iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN UBICACIÓN EN EL PIE DE PÁGINA (MÁS PEQUEÑO Y SUTIL) -->
-  <section class="bg-gray-200 py-8 px-4 border-t border-gray-300 text-center">
-    <div class="max-w-md mx-auto">
-      <p class="text-sm font-semibold text-gray-700 mb-3">¿Necesitas saber cómo llegar al predio?</p>
-      <!-- REEMPLAZA "TU_ENLACE_DE_MAPS_AQUI" POR EL LINK COPIADO EN EL PASO 2 -->
-      <a href="https://maps.app.goo.gl/VFpeh7saMAnFQ8AQ6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-gray-100 hover:bg-white text-gray-700 border border-gray-400 font-medium text-xs px-3 py-1.5 rounded-md shadow-sm transition">
-        📍 Dónde estamos y cómo llegar
-      </a>
-    </div>
-  </section>
-
-  <!-- PIE DE PÁGINA -->
-  <footer class="bg-gray-900 text-white py-6 border-t-4 border-red-600">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center gap-3 text-center">
-      <p class="font-semibold text-sm">Club Velocidad y Resistencia &copy; 2026 - Colastiné, Santa Fe</p>
-      <a href="https://www.instagram.com/clubvelocidadyresistencia/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs text-pink-400 hover:text-pink-300 transition">
-        <span>Síguenos en Instagram @clubvelocidadyresistencia</span>
-      </a>
-    </div>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>
